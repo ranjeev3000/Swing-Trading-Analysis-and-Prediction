@@ -1,1 +1,2 @@
-nifty_200_indexed.csv
+*.csv
+env/
