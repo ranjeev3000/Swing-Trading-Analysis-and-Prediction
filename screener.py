@@ -110,5 +110,8 @@ print(f"\n🌍 MARKET HEALTH: {market_breadth:.1f}% of Nifty 200 is in an Uptren
 if not final_list.empty:
     print("\n--- 🚀 SWING TRADING OPPORTUNITIES ---")
     print(final_list.sort_values(by='Vol_Ratio', ascending=False).to_string(index=False))
+    # Save for position_manager.py to pick up
+    final_list.to_csv('screened_output.csv', index=False)
+    print("✅ Screened results exported to screened_output.csv")
 else:
     print("\n☹️ No stocks met criteria. Cash is a position!")
